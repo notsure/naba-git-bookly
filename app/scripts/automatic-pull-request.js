@@ -11,6 +11,8 @@
  * Twitter: @nochbur
  */
 
+//test
+
 if (window.location.href.match("github.com")) {
     if (window.location.href.match("/compare/")) {
         if (!$(".js-quick-submit")) {
