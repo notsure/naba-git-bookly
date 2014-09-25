@@ -50,7 +50,7 @@ if (window.location.href.match("github.com")) {
 } else {
     text = '** NabaGitBookly **\n' +
         'Woops sorry this script only works on a www.github.com pull-request page.\n\n' +
-        'Do you want me to redirect you to: http://www.github.com?';
+        'Do you want me to redirect you to:\n http://www.github.com?';
     var redirect = confirm(text);
     if (redirect) {
         window.location.href = 'http://www.github.com';
