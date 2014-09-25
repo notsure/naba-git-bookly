@@ -19,12 +19,12 @@ if (window.location.href.match("github.com")) {
         text = '** NabaGitBookly **\n' +
             'Please enter a title for you pull request.\n\n' +
             'You may want to use some of these prefixes:\n'+
-            '[WIP] \n [FEATURE] \n [BUGFIX] \n [HOTFIX] \n [EXPERIMENTAL]';
+            '[WIP] \n[FEATURE] \n[BUGFIX] \n[HOTFIX] \n[EXPERIMENTAL]';
 
         var pullRequestTitle = prompt(text, $('#pull_request_title').val());
 
         if (pullRequestTitle) {
-            $('#pull_request_title').val(text);
+            $('#pull_request_title').val(pullRequestTitle);
         }
 
         text = "__Tasks:__\n" +
