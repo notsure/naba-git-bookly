@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="stylesheet" href="stylesheets/pygment_trac.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -17,16 +18,21 @@
             <header>
                 <h1>NabaGitBookly</h1>
                 <p></p>
-                <p class="view">
-                    <a href="https://github.com/notsure/naba-git-bookly">
-                        View the Project on GitHub <small>notsure/naba-git-bookly</small>
-                    </a>
-                </p>
                 <ul>
-                    <li><a href="https://github.com/notsure/naba-git-bookly/zipball/master">Download <strong>ZIP File</strong></a></li>
-                    <li><a href="https://github.com/notsure/naba-git-bookly/tarball/master">Download <strong>TAR Ball</strong></a></li>
-                    <li><a href="https://github.com/notsure/naba-git-bookly">View On <strong>GitHub</strong></a></li>
+                    <li><a href="http://www.naba.at" target="_blank">Website <strong>naba.at</strong></a></li>
+                    <li><a href="https://twitter.com/nochbur" target="_blank">Find Me On <strong>Twitter</strong></a></li>
+                    <li><a href="https://github.com/notsure/naba-git-bookly" target="_blank">View On <strong>GitHub</strong></a></li>
                 </ul>
+                <br/>
+                <br/>
+                <br/>
+                <div class="well">
+                <p>
+                    <h5><span class="glyphicon glyphicon-certificate"></span> Please Note:</h5>
+                    This fancy tool is still in development. For this reason there might
+                    still be some bugs or limited functionality.
+                </p>
+                </div>
             </header>
             <section>
                 <h2>
@@ -41,47 +47,68 @@
                 </p>
 
                 <h3>What does the script do?</h3>
+
                 <p>
                     When ever I have to make a pull request for work it has to follow some styling
                     guidelines. For example we started to always add a <b>Task</b> and an <b>Information</b>
                     sector in the pull requests description. This helps to remember what needs
                     to be done and helps the reviewer to understand what the pull request is about.
-                    A proper pull request would look like this:
                 </p>
 
-                <pre><code>$ cd your_repo_root/repo_name
-                    $ git fetch origin
-                    $ git checkout gh-pages
-                </code></pre>
+                <h4>A proper pull request would look like this</h4>
+                <p>
+                    <img class="img-thumbnail" src="/images/proper-pullrequest.png" title="This is how a pull request should look like"/>
+                </p>
 
-                <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+                <h4>However this is how a pull request usually looks like</h4>
+                <p>
+                    <img class="img-thumbnail" src="/images/shitty-pullrequest.png" title="This is how a pull request should look like"/>
+                </p>
 
-                <h3>
-                    <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+                <p>
+                    As you can see it looks pretty shitty and a you are giving the reviewer
+                    a hard time by not formatting your pull request. If there is only one single
+                    pull request in your lifetime you probably do not need to change anything, as
+                    you will love to describe the reviewer what you've done there. However for those of
+                    you who have to create dozens of pull requests every day it is pretty annoying
+                    to format the pull requests every single time.
+                </p>
 
-                <p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+                <h3>The Solution</h3>
 
-                <h3>
-                    <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+                <p>
+                    The copy 'n' past time is over! Add this bookmark to your brower to automatically
+                    add the base structure to your pull request. All you need to do is change the
+                    tasks you have done. Save time, conserve your keyboard.
 
-                <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+                    <p style="text-align:center;">
+                    <a data-toggle="tooltip" data-placement="bottom" title="Simply Drag'n'Drop this bookmark in your browsers bookmarks bar" class="btn btn-primary info-tool" href="javascript:var text;if(window.location.href.match("github.com"))if(window.location.href.match("/compare/")){$(".js-quick-submit")||$(".js-details-target").click(),text="** NabaGitBookly **\nPlease enter a title for you pull request.\n\nYou may want to use some of these prefixes:\n[WIP] \n[FEATURE] \n[BUGFIX] \n[HOTFIX] \n[EXPERIMENTAL]";var pullRequestTitle=prompt(text,$("#pull_request_title").val());pullRequestTitle&&$("#pull_request_title").val(pullRequestTitle),text="__Tasks:__\n- [x] done\n- [ ] todo\n- [ ] got feedback\n\n__Informations:__\n\n| Q             | A\n| ------------- | ---\n| Bug fix?      | no\n| New feature?  | yes\n| Tests pass?   | yes\n| Fixed tickets | none\n| Doc           | none\n",$(".js-quick-submit").html(text),$(".composer-submit").click()}else text="** NabaGitBookly **\nThis fancy script currently only works on new pull requests!",alert(text);else{text="** NabaGitBookly **\nWoops sorry this script only works on a www.github.com pull-request page.\n\nDo you want me to redirect you to:\n http://www.github.com?";var redirect=confirm(text);redirect&&(window.location.href="http://www.github.com")}">
+                        <span class="glyphicon glyphicon-bookmark"></span>
+                        Bookmark me!
+                    </a>
+                    </p>
+                </p>
 
-                <h3>
-                    <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+                <h3>How it Works</h3>
 
-                <p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                <p>
+                    Make the changes you need in your project. Publish and push your branch.
+                    Visit Github and click on your branch and make a pull request. Now click the
+                    bookmark. Thats it.
+                </p>
 
-                <h3>
-                    <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-                <p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
             </section>
             <footer>
                 <p>This project is maintained by <a href="https://github.com/notsure">notsure</a></p>
-                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
             </footer>
         </div>
         <script src="javascripts/scale.fix.js"></script>
-        
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script>
+         $(document).ready(function() {
+           $('.info-tool').tooltip();
+         });
+        </script>
     </body>
 </html>
